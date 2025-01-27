@@ -1,6 +1,8 @@
+import styles from './page.module.css'
+
 const Footer = () => {
   return (
-    <footer>
+    <footer className={styles.container}>
       <div>2023 MyApp. All rights reserved</div>
       <div></div>
     </footer>

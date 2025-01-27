@@ -1,4 +1,5 @@
 import Link from "next/link.js"
+import styles from './page.module.css'
 
 const links = [
     { id: 1, title: "Home", url: "/" },
@@ -11,13 +12,15 @@ const links = [
 
 const Navbar = () => {
   return (
-    <nav>
-        <Link href='/'>MyAPP</Link>
-        <div>
+    <nav className={styles.container}>
+        <Link className={styles.logo} href='/'>MyAPP</Link>
+        <div className={styles.links}>
             {links.map(link =>(
                 <Link key={link.id} href={link.url}>{link.title}</Link>
             ))}
+            <button className={styles.logout} type="buuton">Logout</button>
         </div>
+        
     </nav>
   )
 }
