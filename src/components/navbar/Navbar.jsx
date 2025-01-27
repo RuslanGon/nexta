@@ -11,6 +11,7 @@ const links = [
     { id: 6, title: "Dashboard", url: "/dashboard" },
   ];
 
+  
 const Navbar = () => {
   return (
     <nav className={styles.container}>
