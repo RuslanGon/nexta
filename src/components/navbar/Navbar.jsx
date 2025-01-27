@@ -1,3 +1,4 @@
+'use client'
 import Link from "next/link.js"
 import styles from './page.module.css'
 
@@ -18,7 +19,7 @@ const Navbar = () => {
             {links.map(link =>(
                 <Link key={link.id} href={link.url}>{link.title}</Link>
             ))}
-            <button className={styles.logout} type="buuton">Logout</button>
+            <button className={styles.logout} onClick={()=>{console.log('logout');}} type="buuton">Logout</button>
         </div>
         
     </nav>
