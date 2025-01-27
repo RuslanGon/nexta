@@ -15,7 +15,7 @@ const links = [
 const Navbar = () => {
   return (
     <nav className={styles.container}>
-        <Link className={styles.logo} href='/'>MyAPP</Link>
+        <Link className={styles.logo} href='/'>MyApp</Link>
         <div className={styles.links}>
             {links.map(link =>(
                 <Link key={link.id} href={link.url}>{link.title}</Link>
