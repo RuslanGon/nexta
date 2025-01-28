@@ -20,7 +20,7 @@
 
 .img {
   width: 600px;
-  height: 500px;
+  height: 470px;
   object-fit: contain;
   animation: move 3s infinite ease alternate;
 }
