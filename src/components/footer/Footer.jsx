@@ -34,6 +34,15 @@ const Footer = () => {
             height={15}
           />
         </Link>
+        <Link href="https://www.youtube.com/">
+          <Image
+            className={styles.icon}
+            alt="yt logo"
+            src="/yt.png"
+            width={15}
+            height={15}
+          />
+        </Link>
       </div>
     </footer>
   );

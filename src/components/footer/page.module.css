@@ -16,4 +16,10 @@
   .icon {
     opacity: 0.6;
     cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .icon:hover {
+    transform: scale(1.5); 
+    opacity: 1; 
   }
