@@ -1,7 +1,7 @@
 import Button from '@/components/Button/Button.jsx';
 import styles from './page.module.css'
 import Image from 'next/image.js';
-import Aii from '../../../public/aii.jpg'
+import Aii from '../../../public/ai.jpeg'
 
 
 const About = () => {
