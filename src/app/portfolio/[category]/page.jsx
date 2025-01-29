@@ -1,5 +1,6 @@
+import styles from './page.module.css'
 
-const page = () => {
+const page = ({params}) => {
   return (
     <div>pagscsdce</div>
   )
