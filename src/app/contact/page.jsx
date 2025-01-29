@@ -14,7 +14,7 @@ const Contact = () => {
           <Image
             src={Contimg}
             alt="contacts"
-            fill={true}
+            // fill={true}
             className={styles.image}
           />
         </div>

@@ -11,6 +11,7 @@ const About = () => {
         <Image src={Aii}
           alt="about us"
           className={styles.img}
+          priority
         />
         <div className={styles.imgText}>
           <h1 className={styles.imgTitle}>Lorem ipsum dolor sit</h1>
