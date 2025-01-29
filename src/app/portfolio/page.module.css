@@ -2,8 +2,9 @@
     font-size: 100px;
   }
   
-  /* .container {
-  } */
+  .container {
+    margin: 0 auto;
+  }
   
   .selectTitle {
     margin: 20px 0px;
