@@ -15,6 +15,7 @@ const Contact = () => {
             src={Contimg}
             alt="contacts"
             // fill={true}
+            width={500} height={500}
             className={styles.image}
           />
         </div>
