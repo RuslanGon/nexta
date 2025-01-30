@@ -1,16 +1,30 @@
 import Image from "next/image.js";
 import styles from "./page.module.css";
+import Fetch from '../../../../public/fetch.jpg'
 
-const BlogId = () => {
+async function getData(id) {
+  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
+    cache: "no-store",
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
+}
+
+const BlogId = async ({ params }) => {
+  const data = await getData(params.id);
   return (
     <div className={styles.container}>
       <div className={styles.top}>
         <div className={styles.info}>
-          <h1 className={styles.title}>title</h1>
-          <p className={styles.desc}>desc</p>
+          <h1 className={styles.title}>{data.title}</h1>
+          <p className={styles.desc}>{data.body}</p>
           <div className={styles.author}>
             <Image
-              src=""
+              src={Fetch}
               alt=""
               width={40}
               height={40}
@@ -20,7 +34,7 @@ const BlogId = () => {
           </div>
         </div>
         <div className={styles.imageContainer}>
-          <Image src="" alt="" fill={true} className={styles.image} />
+          <Image src={Fetch} alt="logo" fill={true} className={styles.image} />
         </div>
       </div>
       <div className={styles.content}>
