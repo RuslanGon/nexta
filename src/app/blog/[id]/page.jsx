@@ -13,11 +13,10 @@ async function getData(id) {
   return res.json();
 }
 
-// Компонент BlogId
-const BlogId = async ({ params }) => {
-  // Ожидаем разрешение параметров маршрута
-  const { id } = await params;
 
+const BlogId = async ({ params }) => {
+
+  const { id } = await params;
 
   const data = await getData(id);
 
