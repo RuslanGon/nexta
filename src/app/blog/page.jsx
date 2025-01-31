@@ -28,6 +28,7 @@ const Blog = async () => {
               width={400}
               height={250}
               alt="logo"
+              priority
             />
           </div>
           <div className={styles.content}>
