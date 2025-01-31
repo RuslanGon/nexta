@@ -3,8 +3,11 @@ import styles from "./page.module.css";
 import Fetch from '../../../../public/fetch.jpg'
 
 async function getData(id) {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
-    cache: "no-store",
+  // const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, 
+  const res = await fetch(`http://localhost:3000/api/posts/${id}`, 
+
+  {
+    // cache: "no-store",
   });
 
   if (!res.ok) {
@@ -21,7 +24,8 @@ const BlogId = async ({ params }) => {
       <div className={styles.top}>
         <div className={styles.info}>
           <h1 className={styles.title}>{data.title}</h1>
-          <p className={styles.desc}>{data.body}</p>
+          <p className={styles.desc}>{data.content}</p>
+          <p className={styles.name}>{item.username}</p>
           <div className={styles.author}>
             <Image
               src={Fetch}
