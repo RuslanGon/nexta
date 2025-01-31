@@ -1,7 +1,8 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import Fetch from '../../../../public/fetch.jpg'
+import Fetch from "../../../../public/fetch.jpg";
 
+// Функция для получения данных
 async function getData(id) {
   const res = await fetch(`http://localhost:3000/api/posts?id=${id}`);
 
@@ -12,8 +13,19 @@ async function getData(id) {
   return res.json();
 }
 
+// Компонент BlogId
 const BlogId = async ({ params }) => {
-  const data = await getData(params.id);
+  // Ожидаем разрешение параметров маршрута
+  const { id } = await params;
+
+
+  const data = await getData(id);
+
+  if (!data) {
+    return <div>Post not found</div>;
+  }
+
+  console.log(data); 
 
   return (
     <div className={styles.container}>
@@ -25,7 +37,7 @@ const BlogId = async ({ params }) => {
           <div className={styles.author}>
             <Image
               src={Fetch}
-              alt=""
+              alt="Автор"
               width={40}
               height={40}
               className={styles.avatar}
