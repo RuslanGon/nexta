@@ -44,6 +44,7 @@ const Login = () => {
       </form>
 
       <button onClick={() => signIn("google")}>Login with Google</button>
+      
     </div>
   );
 };
