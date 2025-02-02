@@ -6,7 +6,7 @@ import useSWR from 'swr';
 
 const Dashboard = () => {
 const session = useSession()
-
+console.log(session);
 
 // const [data, setData] = useState([]);
 //   const [error, setError] = useState(false);
