@@ -1,9 +1,13 @@
 'use client'
+import { useSession } from "next-auth/react";
 // import { useEffect, useState } from 'react'
 import styles from './page.module.css'
 import useSWR from 'swr';
 
 const Dashboard = () => {
+const session = useSession()
+
+
 // const [data, setData] = useState([]);
 //   const [error, setError] = useState(false);
 //   const [isLoading, setIsLoading] = useState(true);

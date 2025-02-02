@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Fetch from "../../../../public/fetch.jpg";
 
-// Функция для получения данных
+
 async function getData(id) {
   const res = await fetch(`http://localhost:3000/api/posts?id=${id}`);
 
@@ -13,6 +13,13 @@ async function getData(id) {
   return res.json();
 }
 
+export async function generateMetadata({ params }){
+  const post = await getData(params.id)
+  return {
+   title: post.title,
+   description: post.content,
+ };
+}
 
 const BlogId = async ({ params }) => {
 
