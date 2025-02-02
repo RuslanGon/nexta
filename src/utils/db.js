@@ -8,4 +8,4 @@ const connect = async () => {
   }
 };
 
-export default connect;
+export default connect;  
