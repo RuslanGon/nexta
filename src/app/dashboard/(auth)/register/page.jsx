@@ -12,8 +12,11 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const name = e.target[0].value;
+    // const name = e.target.elements.name.value;
     const email = e.target[1].value;
+    // const name = e.target.elements.email.value;
     const password = e.target[2].value;
+    // const name = e.target.elements.password.value;
 
     try {
       const res = await fetch("/api/auth/register", {
